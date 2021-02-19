@@ -1,0 +1,50 @@
+body
+{
+    background-color:#444;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#filter-list 
+{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0px;
+    padding-left: 0px;
+    user-select: none;
+}
+
+.filter 
+{
+    list-style: none;
+    display: inline;
+    padding: 5px;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+.filter:hover
+{
+    background-color: white;
+    color: black;
+}
+
+
+.project
+{
+    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.project > *
+{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    vertical-align: baseline;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
