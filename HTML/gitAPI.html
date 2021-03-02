@@ -1,16 +1,66 @@
-<html>
+<!doctype html>
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yann Trou &ndash; Accueil</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
+        integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" type="text/css" href="../CSS/gitAPI.css" />
 </head>
 
 <body>
-    <ul id="filter-list">
-        <li class="filter">Tout voir</li>
-        <li class="filter">JS</li>
-    </ul>
-    <div id="output"></div>
+
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <div class="pure-menu-heading" href="#company">MENU</div>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#home" class="pure-menu-link">Accueil</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#about" class="pure-menu-link">A Propos</a>
+                    </li>
+
+                    <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                        <a href="#" class="pure-menu-link">Services</a>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a href="#contact" class="pure-menu-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div id="main">
+            <div class="header">
+                <h1>Projets</h1>
+            </div>
+
+            <div class="content">
+                <div class="pure-button-group filter-list" role="group">
+                    <button class="pure-button pure-button-active filter">Tout voir</button>
+                    <button class="pure-button filter">JS</button>
+                </div>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="../JS/gitAPI.js" defer></script>
 </body>

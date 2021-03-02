@@ -1,11 +1,4 @@
-body
-{
-    background-color:#444;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#filter-list 
+.filter-list 
 {
     display: flex;
     justify-content: flex-start;
@@ -14,18 +7,18 @@ body
     user-select: none;
 }
 
-.filter 
+#filter 
 {
     list-style: none;
     display: inline;
     padding: 5px;
-    border: 1px solid white;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
-.filter:hover
+#filter:hover
 {
-    background-color: white;
+    background-color:#1f8dd6;
     color: black;
 }
 
@@ -33,17 +26,16 @@ body
 .project
 {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid black;
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
 }
 
 .project > *
 {
-    display: inline;
     text-decoration: none;
-    color: white;
+    color: black;
     vertical-align: baseline;
     padding-top: 5px;
     padding-bottom: 5px;
