@@ -1,0 +1,15 @@
+Contenu du site
+    -> liste des projets, triable, cliquables, etc...
+    -> Formulaire de contact
+    -> CV
+    -> Page d'accueil
+
+Backend:
+    -> DB qui va lister les projets
+    -> sendmail pour le formulaire de contact.
+    -> formulaire pour ajouter un projet.
+
+Statique:
+    -> Accueil
+    -> CV
+    -> contact
