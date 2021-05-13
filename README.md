@@ -1,5 +1,4 @@
-# www.yann-trou.com
-Site perso
+# SITE PERSO
 
 ## Contenu du site:
 * portfolio
@@ -15,5 +14,7 @@ Site perso
 * htpassword pour l'accès admin
 
 ## specs frontend
+* templates a fond
+* sauf exceptions, full AJAX
 * affichage dynamique
 * a fixer.
