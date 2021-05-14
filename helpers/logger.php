@@ -2,7 +2,7 @@
 
 class logger
 {
-    public static string $logDir = __DIR__ . "/../data/logs/";
+    public static string $logDir = __DIR__ . "./../logs/";
 
     public static function log(string $message)
     {

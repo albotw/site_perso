@@ -1,0 +1,2 @@
+14-05-2021 04:10:34 - ::()[] - test
+14-05-2021 04:19:17 - projets.php::query()[9] - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'projet.id' in 'where clause'

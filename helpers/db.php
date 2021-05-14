@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . "./config.php");
-include_once(__DIR__ . "./logger.php");
+require_once(__DIR__ . "./logger.php");
 
 class db
 {
@@ -22,6 +22,7 @@ class db
         catch (PDOException $e)
         {
             echo "Erreur de connexion: " . $e->getMessage();
+            logger::log("Impossible de se connecter à la base de données");
         }
     }
 
