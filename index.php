@@ -9,6 +9,10 @@
 
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <a href="contact">Contact</a>
+    <a href="portfolio">Portfolio</a>
+    <a href="CV">CV</a>
+    <a href="admin">Administration</a>
     <?php
         require_once ("helpers/Input.php");
         require_once ("helpers/token.php");

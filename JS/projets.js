@@ -4,7 +4,7 @@ $(document).ready(function()
     csrf = $("#csrf").text();
     init();
 
-    $("#searchButton").on("click", function(){
+    $("#searchbar").on("keyup", function(){
         let text = $("#searchbar").val();
         console.log(text);
         $.ajax({
