@@ -1,4 +1,19 @@
+Vue.component("projet-component", {
+    template: `
+            <div>
+                <h3>{{ nom }}</h3>
+                <a href="url">{{ url }}</a>
+                <a href="url">{{ downloadlink }}</a>
+                <button v-for="tag in tags">
+                    {{ tag.tagname }}
+                </button>
+            </div> `,
+    props: ["nom", "url", "downloadlink", "tags"],
+});
+
 let csrf;
+let vue1;
+let vue2;
 window.addEventListener("DOMContentLoaded", function()
 {
     csrf = $("#csrf").text();
@@ -8,17 +23,20 @@ window.addEventListener("DOMContentLoaded", function()
 
     $("#searchbar").on("keyup", function(){
         let text = $("#searchbar").val();
-        console.log(text);
-        $.ajax({
-            url: "router.php",
-            type: "POST",
-            data: {csrf_token: csrf, action: "searchProjets", text: text},
-            dataType: "json",
-            success: function(result){setupPortfolio(result);},
-            error: function(result){console.log("Erreur: " + result);}
-        });
+        search(text);
     });
 });
+
+async function search(text)
+{
+    try{
+        var data = await $.post("router.php", {csrf_token: csrf, action: "searchProjets", text: text});
+        vue1.json = JSON.parse(data);
+    }catch(error)
+    {
+        console.error(error);
+    }
+}
 
 async function setupTags()
 {
@@ -26,7 +44,7 @@ async function setupTags()
     {
         var data = await $.post("router.php", {csrf_token: csrf, action: "getAllTags"});
         var json = JSON.parse(data);
-        var vue2 = new Vue({el: "#taglist", data: {json}});
+        vue2 = new Vue({el: "#taglist", data: {json}});
     }catch(error)
     {
         console.error(error);
@@ -37,10 +55,9 @@ async function setupPortfolio()
 {
     try
     {
-        $("#projets").empty();
         var data = await $.post("router.php", {csrf_token: csrf, action: "getAllProjets"});
         var json = JSON.parse(data);
-        var vue1 = new Vue({el: "#projets", data: {json}});
+        vue1 = new Vue({el: "#projets", data: {json}});
     }catch(error)
     {
         console.error(error);

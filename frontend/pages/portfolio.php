@@ -5,9 +5,13 @@
     </button>
 </div>
 <div id="projets">
-    <p v-for="projet in json">
-        {{ projet.nom }}
-    </p>
+    <projet-component
+            v-for="projet in json"
+            v-bind:url="projet.url"
+            v-bind:downloadlink="projet.downloadLink"
+            v-bind:nom="projet.nom" v-bind:key="projet.id"
+            v-bind:tags="projet.tags">
+    </projet-component>
 </div>
 
 <script src="frontend/JS/projets.js" type="text/javascript"></script>

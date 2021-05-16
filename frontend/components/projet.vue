@@ -1,16 +1,14 @@
-<script>
-    export default{
-        name: "projet",
-        props: ["url", "downloadLink", "nom", ]
-    }
-</script>
-<template>
-    <p>
-    <h3>{{ nom }}</h3>
-    <a :href="url">Dépot</a>
-    <a :href="downloadLink">Télécharger</a>
-    <button v-for="tag in tags" v-bind:key="tag.id">
-        {{ tag.tagname }}
-    </button>
-    </p>
-</template>
+Vue.component("projet-component", {
+    template: `
+        <template>
+            <p>
+            <h3>{{ projet.nom }}</h3>
+            <a :href="url">{{ projet.url }}</a>
+            <a :href="downloadLink">{{ projet.downloadLink }}</a>
+            <button v-for="tag in projet.tags">
+                {{ tag.tagname }}
+            </button>
+            </p>
+        </template> `,
+    props: {projet: Object}
+});
