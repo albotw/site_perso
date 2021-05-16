@@ -6,8 +6,6 @@ class logger
 
     public static function log(string $message)
     {
-        //TODO: vérification du fonctionnement
-        //TODO: ajouter ça dans la db ?
         $origin = basename(debug_backtrace()[1]['file']) . "::" . debug_backtrace()[1]['function'] . "()[" . debug_backtrace()[1]['line'] . "]";
         $date = date("d-m-Y h:i:s");
         logger::generateLatest();

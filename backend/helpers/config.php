@@ -11,5 +11,7 @@ class config
 
     //TODO: lister noms des tables en constantes
     public static string $PROJ_TABLE = "projets";
+    public static string $TAGS_TABLE = "tags";
+    public static string $TAGL_TABLE = "taglist";
 }
 ?>

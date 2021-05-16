@@ -9,4 +9,4 @@
     <textarea name="texte" id="texte"></textarea><br/>
     <button type="button" id="envoi">Envoyer</button>
 </form>
-<script src="JS/contact.js" type="text/javascript"></script>
+<script src="frontend/JS/contact.js" type="text/javascript"></script>

@@ -1,9 +1,9 @@
 <?php
-require_once("helpers/Input.php");
-require_once("helpers/token.php");
+require_once("backend/helpers/Input.php");
+require_once("backend/helpers/token.php");
 
-require_once("controllers/projets.php");
-require_once("controllers/contact.php");
+require_once("backend/controllers/projets.php");
+require_once("backend/controllers/contact.php");
 session_start();
 if (Input::exists())
 {
@@ -15,12 +15,16 @@ if (Input::exists())
                 getAllProjets();
                 break;
 
+            case "getAllTags":
+                getAllTags();
+                break;
+
             case "searchProjets":
                 $text = Input::get("text");
                 if (!empty($text))
                     search($text);
                 else
-                    echo "Aucun résultat trouvé";
+                    echo "Aucun résultat trouvé\n";
                 break;
 
             case "sendMessage":

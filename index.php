@@ -9,40 +9,38 @@
 
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <a href="contact">Contact</a>
-    <a href="portfolio">Portfolio</a>
-    <a href="CV">CV</a>
-    <a href="admin">Administration</a>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <?php
-        require_once ("helpers/Input.php");
-        require_once ("helpers/token.php");
+        require_once("backend/helpers/Input.php");
+        require_once("backend/helpers/token.php");
         session_start();
         token::generate();
 
+        include_once("frontend/include/header.php");
         if (Input::exists())
         {
             switch(Input::get("page"))
             {
                 case "CV":
-                    include_once("pages/CV.php");
+                    include_once("frontend/pages/CV.php");
                     break;
 
                 case "contact":
-                    include_once("pages/contact.php");
+                    include_once("frontend/pages/contact.php");
                     break;
 
                 case "portfolio":
-                    include_once("pages/portfolio.php");
+                    include_once("frontend/pages/portfolio.php");
                     break;
 
                 default:
-                    include_once("pages/home.php");
+                    include_once("frontend/pages/home.php");
                     break;
             }
         }
         else
         {
-            include_once("pages/home.php");
+            include_once("frontend/pages/home.php");
         }
     ?>
     <div id="csrf"><?= token::get();?></div>

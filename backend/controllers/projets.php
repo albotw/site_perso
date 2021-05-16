@@ -1,6 +1,6 @@
 <?php
 
-require_once("helpers/db.php");
+require_once(__DIR__ . "./../helpers/db.php");
 
 function getAllProjets()
 {
@@ -12,6 +12,19 @@ function getAllProjets()
     else
     {
         $results = grabTags($results);
+        echo json_encode($results);
+    }
+}
+
+function getAllTags()
+{
+    $results = db::getInstance()->getAll(config::$TAGS_TABLE);
+    if (db::getInstance()->hasError())
+    {
+        echo "Erreur pendant la récupération des tags";
+    }
+    else
+    {
         echo json_encode($results);
     }
 }
