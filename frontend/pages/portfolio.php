@@ -1,6 +1,6 @@
-<input type="text" id="searchbar"/>
+<input type="text" id="searchbar" value=""/>
 <div id="taglist">
-    <button v-for="tag in json">
+    <button v-for="tag in json" v-on:click="search">
         {{ tag.tagname }}
     </button>
 </div>
