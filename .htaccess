@@ -1,6 +1,0 @@
-Options +FollowSymlinks
-RewriteEngine On
-RewriteRule ^CV$ index.php?page=CV [L]
-RewriteRule ^contact$ index.php?page=contact [L]
-RewriteRule ^portfolio$ index.php?page=portfolio [L]
-RewriteRule ^admin$ index.php?page=admin [L]
